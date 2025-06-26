@@ -4,10 +4,8 @@ target_sources(adxl345 PRIVATE
     "adxl345.c"
 )
 
-target_include_directories(adxl345 PUBLIC 
-)
-
-target_link_libraries(adxl345 PRIVATE
+target_include_directories(adxl345 PUBLIC
+    ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
 target_compile_options(adxl345 PUBLIC
