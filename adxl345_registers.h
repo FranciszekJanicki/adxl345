@@ -3,6 +3,10 @@
 
 #include <stdint.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct {
     uint8_t devid : 8;
 } adxl345_devid_reg_t;
@@ -166,5 +170,9 @@ typedef struct {
     uint8_t fifo_trig : 1;
     uint8_t entries : 6;
 } adxl345_fifo_status_reg_t;
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif // ADXL345_ADXL345_REGISTERS_H

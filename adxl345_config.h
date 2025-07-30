@@ -5,6 +5,10 @@
 #include <stddef.h>
 #include <stdint.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef float float32_t;
 
 typedef struct {
@@ -116,5 +120,9 @@ typedef struct {
     adxl345_err_t (*bus_write_data)(void*, uint8_t, uint8_t const*, size_t);
     adxl345_err_t (*bus_read_data)(void*, uint8_t, uint8_t*, size_t);
 } adxl345_interface_t;
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif // ADXL345_ADXL345_CONFIG_H

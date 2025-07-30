@@ -4,6 +4,10 @@
 #include "adxl345_config.h"
 #include "adxl345_registers.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct {
     adxl345_config_t config;
     adxl345_interface_t interface;
@@ -152,5 +156,9 @@ adxl345_err_t adxl345_set_fifo_ctl_reg(adxl345_t const* adxl345,
 
 adxl345_err_t adxl345_get_fifo_status_reg(adxl345_t const* adxl345,
                                           adxl345_fifo_status_reg_t* reg);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif // ADXL345_ADXL345_H
